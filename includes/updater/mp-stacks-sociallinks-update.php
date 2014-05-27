@@ -25,7 +25,7 @@
 			'software_name' => 'MP Stacks SocialLinks', //<- The exact name of this Plugin.
 			'software_api_url' => 'http://mintplugins.com',//The URL where SocialLinks and mp_repo are installed and checked
 			'software_filename' => 'mp-stacks-sociallinks.php',
-			'software_licensed' => false, //<-Boolean
+			'software_licensed' => true, //<-Boolean
 		);
 		
 		//Since this is a plugin, call the Plugin Updater class
