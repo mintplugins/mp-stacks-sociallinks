@@ -77,6 +77,13 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_value' => '',
 		),
 		array(
+			'field_id'			=> 'sociallinks_color_hover',
+			'field_title' 	=> __( 'Default Mouse-Over Icon Colors (Where applicable)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'Select the color the icons will be when the mouse is over them', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'colorpicker',
+			'field_value' => '',
+		),
+		array(
 			'field_id'			=> 'sociallink_description',
 			'field_title' 	=> __( '<br />Add Your Social Links Below', 'mp_stacks_sociallinks'),
 			'field_description' 	=> '<br />Open up the following areas to add/remove new Social Links.' ,
@@ -118,9 +125,25 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_repeater' => 'mp_sociallinks_repeater'
 		),
 		array(
+			'field_id'			=> 'sociallink_icon_color_hover',
+			'field_title' 	=> __( 'Custom Mouse-Over Icon Color', 'mp_stacks_sociallinks'),
+			'field_description' 	=> 'If you\'d like a custom color for this specific icon when the mouse is over, select it here:',
+			'field_type' 	=> 'colorpicker',
+			'field_value' => '',
+			'field_repeater' => 'mp_sociallinks_repeater'
+		),
+		array(
 			'field_id'			=> 'sociallink_image',
 			'field_title' 	=> __( 'Icon', 'mp_stacks_sociallinks'),
 			'field_description' 	=> 'Upload the icon image to use for this Social Link. Tip: Make your image a perfect square.',
+			'field_type' 	=> 'mediaupload',
+			'field_value' => '',
+			'field_repeater' => 'mp_sociallinks_repeater'
+		),
+		array(
+			'field_id'			=> 'sociallink_image_hover',
+			'field_title' 	=> __( 'Icon when Mouse Over', 'mp_stacks_sociallinks'),
+			'field_description' 	=> 'Upload the icon image to use for this Social Link when the mouse is over it. Tip: Make sure this image matches the size of the one above and is a different color.',
 			'field_type' 	=> 'mediaupload',
 			'field_value' => '',
 			'field_repeater' => 'mp_sociallinks_repeater'

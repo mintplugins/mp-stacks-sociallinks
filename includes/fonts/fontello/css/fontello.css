@@ -17,9 +17,6 @@
   }
 }
 */
-[class^="mp-stacks-sociallinks"]{
-	display:inline-block;	
-}
 [class^="mp-stacks-sociallinks"]:before,
 [class*=" mp-stacks-sociallinks"]:before{
   font-family: 'mp_stacks_sociallinks_icons';
@@ -57,6 +54,7 @@
 
 .mp-stacks-sociallinks-c-facebook:before { content: "\E811"; } /* '⎉' */
 .mp-stacks-sociallinks-facebook:before { content: "\E810"; } /* '⎉' */
+.mp-stacks-sociallinks-square-facebook:before { content: "\E812"; } /* '⎉' */
 
 .mp-stacks-sociallinks-c-googleplus:before { content: "\E813"; } /* '⎉' */
 .mp-stacks-sociallinks-googleplus:before { content: "\E814"; } /* '⎉' */

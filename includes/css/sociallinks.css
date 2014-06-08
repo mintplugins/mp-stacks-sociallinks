@@ -1,9 +1,21 @@
+.mp-stacks-sociallinks{
+	display:inline-block;
+	vertical-align: top;	
+}
 .mp-stacks-sociallink{
+	position:relative;
 	float:left;	
 	text-align:center;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
+	overflow:hidden;
+	display:inline-block;
+}
+.mp-stacks-sociallink a{
+	position:absolute;
+	top:-14%;
+	left:0px;	
 }
 .mp-stacks-sociallinks-icon-link {
 	display:inline-block;	
@@ -13,4 +25,11 @@
 }
 .mp-stacks-sociallinks-icon-container.mp-stacks-sociallinks-image{
 	margin: 14% 0px 0px 0px;	
+}
+.mp-stacks-sociallinks-clearedfix:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
 }

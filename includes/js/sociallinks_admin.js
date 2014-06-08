@@ -17,21 +17,30 @@ jQuery(document).ready(function($){
 				//Show the icon field
 				$(this).parent().parent().parent().find("[class$='sociallink_iconBBBBB'], [class*='sociallink_iconBBBBB ']").css('display', 'block');
 				$(this).parent().parent().parent().find("[class$='sociallink_icon_colorBBBBB'], [class*='sociallink_icon_colorBBBBB ']").css('display', 'block');
+				$(this).parent().parent().parent().find("[class$='sociallink_icon_color_hoverBBBBB'], [class*='sociallink_icon_color_hoverBBBBB ']").css('display', 'block');
 				
 				//Hide the the image field
 				$(this).parent().parent().parent().find("[class$='sociallink_imageBBBBB'], [class*='sociallink_imageBBBBB ']").css('display', 'none');
+				$(this).parent().parent().parent().find("[class$='sociallink_image_hoverBBBBB'], [class*='sociallink_image_hoverBBBBB ']").css('display', 'none');
 			}
 			else if( icon_type == 'sociallink_image' ){
 				//Hide the icon field
 				$(this).parent().parent().parent().find("[class$='sociallink_iconBBBBB'], [class*='sociallink_iconBBBBB ']").css('display', 'none');
 				$(this).parent().parent().parent().find("[class$='sociallink_icon_colorBBBBB'], [class*='sociallink_icon_colorBBBBB ']").css('display', 'none');
+				$(this).parent().parent().parent().find("[class$='sociallink_icon_color_hoverBBBBB'], [class*='sociallink_icon_color_hoverBBBBB ']").css('display', 'none');
+				
 				//Show the the image field
 				$(this).parent().parent().parent().find("[class$='sociallink_imageBBBBB'], [class*='sociallink_imageBBBBB ']").css('display', 'block');
+				$(this).parent().parent().parent().find("[class$='sociallink_image_hoverBBBBB'], [class*='sociallink_image_hoverBBBBB ']").css('display', 'block');
 			}
 			else{
 				//Hide both the icon and the image selector fields
 				$(this).parent().parent().parent().find("[class$='sociallink_iconBBBBB'], [class*='sociallink_iconBBBBB ']").css('display', 'none');
+				$(this).parent().parent().parent().find("[class$='sociallink_icon_colorBBBBB'], [class*='sociallink_icon_colorBBBBB ']").css('display', 'none');
+				$(this).parent().parent().parent().find("[class$='sociallink_icon_color_hoverBBBBB'], [class*='sociallink_icon_color_hoverBBBBB ']").css('display', 'none');
+				
 				$(this).parent().parent().parent().find("[class$='sociallink_imageBBBBB'], [class*='sociallink_imageBBBBB ']").css('display', 'none');
+				$(this).parent().parent().parent().find("[class$='sociallink_image_hoverBBBBB'], [class*='sociallink_image_hoverBBBBB ']").css('display', 'none');
 			}
 						
 		});
@@ -45,9 +54,11 @@ jQuery(document).ready(function($){
 		//Hide the icon
 		$( containing_li ).next( ".mp_sociallinks_repeater_repeater" ).find("[class$='sociallink_iconBBBBB'], [class*='sociallink_iconBBBBB ']").css('display', 'none');
 		$( containing_li ).next( ".mp_sociallinks_repeater_repeater" ).find("[class$='sociallink_icon_colorBBBBB'], [class*='sociallink_icon_colorBBBBB ']").css('display', 'none');
+		$( containing_li ).next( ".mp_sociallinks_repeater_repeater" ).find("[class$='sociallink_icon_color_hoverBBBBB'], [class*='sociallink_icon_color_hoverBBBBB ']").css('display', 'none');
 		
 		//Hide image upload fields
-		$( containing_li ).next( ".mp_sociallinks_repeater_repeater" ).find("[class$='sociallink_imageBBBBB'], [class*='sociallink_imageBBBBB ']").css('display', 'none');		
+		$( containing_li ).next( ".mp_sociallinks_repeater_repeater" ).find("[class$='sociallink_imageBBBBB'], [class*='sociallink_imageBBBBB ']").css('display', 'none');	
+		$( containing_li ).next( ".mp_sociallinks_repeater_repeater" ).find("[class$='sociallink_image_hoverBBBBB'], [class*='sociallink_image_hoverBBBBB ']").css('display', 'none');		
 		
 	});
 	
