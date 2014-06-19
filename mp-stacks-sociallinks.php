@@ -3,7 +3,7 @@
 Plugin Name: MP Stacks + SocialLinks
 Plugin URI: http://mintplugins.com
 Description: Displays links to Social Networks in a Brick using included icon font or custom image icons
-Version: 1.0.0.1
+Version: 1.0.0.2
 Author: Mint Plugins
 Author URI: http://mintplugins.com
 Text Domain: mp_stacks_sociallinks
@@ -34,7 +34,7 @@ License: GPL2
 */
 // Plugin version
 if( !defined( 'MP_STACKS_SOCIALLINKS_VERSION' ) )
-	define( 'MP_STACKS_SOCIALLINKS_VERSION', '1.0.0.0' );
+	define( 'MP_STACKS_SOCIALLINKS_VERSION', '1.0.0.2' );
 
 // Plugin Folder URL
 if( !defined( 'MP_STACKS_SOCIALLINKS_PLUGIN_URL' ) )
