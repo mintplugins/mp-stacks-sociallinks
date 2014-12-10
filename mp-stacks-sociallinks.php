@@ -149,10 +149,14 @@ function mp_stacks_sociallinks_include_files(){
 		require( MP_STACKS_SOCIALLINKS_PLUGIN_DIR . 'includes/metaboxes/mp-stacks-sociallinks-meta/mp-stacks-sociallinks-meta.php' );
 		
 		/**
-		 * Functions which assist with the creation of templates using this add-on
+		 * Add this add on to the list of Active MP Stacks Add Ons
 		 */
 		if ( function_exists('mp_stacks_developer_textdomain') ){
-			require( MP_STACKS_SOCIALLINKS_PLUGIN_DIR . 'includes/misc-functions/stack-template-functions.php' );
+			function mp_stacks_sociallinks_add_active( $required_add_ons ){
+				$required_add_ons['mp_stacks_sociallinks'] = 'MP Stacks + SocialLinks';
+				return $required_add_ons;
+			}
+			add_filter( 'mp_stacks_active_add_ons', 'mp_stacks_sociallinks_add_active' );
 		}
 		
 		/**

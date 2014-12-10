@@ -22,16 +22,6 @@
  * @return   void
  */
 function mp_stacks_sociallinks_create_meta_box(){	
-
-	//Get current page
-	$current_page = get_current_screen();
-		
-	//Only load if we are on an mp_brick page or the stack template creation page
-	if ( $current_page->id == 'mp_brick' || $current_page->id == 'settings_page_mp_stacks_create_template_page' ){
-		//Keep er goin!
-	}else{
-		return;	
-	}
 	
 	/**
 	 * Array which stores all info about the new metabox
@@ -190,4 +180,4 @@ function mp_stacks_sociallinks_create_meta_box(){
 	global $mp_stacks_sociallinks_meta_box;
 	$mp_stacks_sociallinks_meta_box = new MP_CORE_Metabox($mp_stacks_sociallinks_add_meta_box, $mp_stacks_sociallinks_items_array);
 }
-add_action('current_screen', 'mp_stacks_sociallinks_create_meta_box');
+add_action('mp_brick_metabox', 'mp_stacks_sociallinks_create_meta_box');

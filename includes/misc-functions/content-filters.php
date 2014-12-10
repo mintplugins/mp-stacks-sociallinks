@@ -95,8 +95,20 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 			if ( $sociallinks_repeater['sociallink_icon_type'] == 'sociallink_icon' ){
 				
 				//Get and set Social Icon Color Hover
+				$sociallink_icon_color = $sociallinks_repeater['sociallink_icon_color'];
+				$sociallink_icon_color = !empty( $sociallink_icon_color ) ? $sociallink_icon_color : NULL;
+				
+				//CSS for this Social Icon's Color 
+				if ( !empty( $sociallink_icon_color ) ){
+					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallink-' . $social_link_counter . ' a{';
+						$css_sociallinks_output .= 'color:' . $sociallink_icon_color . ';';
+					$css_sociallinks_output .= '}';
+				}
+				
+				//Get and set Social Icon Color Hover
 				$sociallink_icon_color_hover = $sociallinks_repeater['sociallink_icon_color_hover'];
 				$sociallink_icon_color_hover = !empty( $sociallink_icon_color_hover ) ? $sociallink_icon_color_hover : NULL;
+				
 				
 				//CSS for this Social Icon's Color Hover
 				if ( !empty( $sociallink_icon_color_hover ) ){

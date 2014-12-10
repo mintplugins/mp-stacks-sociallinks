@@ -33,6 +33,9 @@ See full instructions at http://mintplugins.com/doc/mp-stacks
 
 == Changelog ==
 
+= 1.0.0.4 = December 9, 2014
+* Fixed icon colours not being set (only hover colours worked)
+
 = 1.0.0.3 = July 24, 2014
 * Stack Template updates to allow it to work with the mp-stacks-developer plugin
 
