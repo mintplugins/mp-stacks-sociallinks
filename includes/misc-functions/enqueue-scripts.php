@@ -48,9 +48,6 @@ function mp_stacks_sociallinks_admin_enqueue_scripts(){
 	
 	//Enqueue Font Awesome CSS
 	wp_enqueue_style( 'mp-stacks-sociallinks-icons', plugins_url( '/fonts/fontello/css/fontello.css', dirname( __FILE__ ) ) );
-	
-	//Enqueue sociallinks CSS
-	wp_enqueue_script( 'mp_stacks_sociallinks_js', plugins_url( 'js/sociallinks_admin.js', dirname( __FILE__ ) ), array( 'jquery' ) );
 
 }
 add_action( 'admin_enqueue_scripts', 'mp_stacks_sociallinks_admin_enqueue_scripts' );

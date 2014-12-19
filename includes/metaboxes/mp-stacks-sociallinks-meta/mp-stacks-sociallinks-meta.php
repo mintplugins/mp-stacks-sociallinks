@@ -41,45 +41,10 @@ function mp_stacks_sociallinks_create_meta_box(){
 	 */
 	$mp_stacks_sociallinks_items_array = array(
 		array(
-			'field_id'			=> 'sociallinks_per_row',
-			'field_title' 	=> __( 'Links Per Row', 'mp_stacks_sociallinks'),
-			'field_description' 	=> __( 'How many links do you want from left to right before a new row starts?', 'mp_stacks_sociallinks' ),
-			'field_type' 	=> 'number',
-			'field_value' => '',
-		),
-		array(
-			'field_id'			=> 'sociallinks_spacing',
-			'field_title' 	=> __( 'Link Spacing', 'mp_stacks_sociallinks'),
-			'field_description' 	=> __( 'How much space would you like to have in between each link? (In Pixels)', 'mp_stacks_sociallinks' ),
-			'field_type' 	=> 'number',
-			'field_value' => '',
-		),
-		array(
-			'field_id'			=> 'sociallinks_size',
-			'field_title' 	=> __( 'Social Icon Size', 'mp_stacks_sociallinks'),
-			'field_description' 	=> __( 'What size should the icons be? (Pixels)', 'mp_stacks_sociallinks' ),
-			'field_type' 	=> 'number',
-			'field_value' => '',
-		),
-		array(
-			'field_id'			=> 'sociallinks_color',
-			'field_title' 	=> __( 'Default Icon Colors (Where applicable)', 'mp_stacks_sociallinks'),
-			'field_description' 	=> __( 'Select the color the icons will be', 'mp_stacks_sociallinks' ),
-			'field_type' 	=> 'colorpicker',
-			'field_value' => '',
-		),
-		array(
-			'field_id'			=> 'sociallinks_color_hover',
-			'field_title' 	=> __( 'Default Mouse-Over Icon Colors (Where applicable)', 'mp_stacks_sociallinks'),
-			'field_description' 	=> __( 'Select the color the icons will be when the mouse is over them', 'mp_stacks_sociallinks' ),
-			'field_type' 	=> 'colorpicker',
-			'field_value' => '',
-		),
-		array(
-			'field_id'			=> 'sociallink_description',
-			'field_title' 	=> __( '<br />Add Your Social Links Below', 'mp_stacks_sociallinks'),
-			'field_description' 	=> '<br />Open up the following areas to add/remove new Social Links.' ,
-			'field_type' 	=> 'basictext',
+			'field_id'			=> 'mp_stacks_sociallinks_links_showhider',
+			'field_title' 	=> __( 'Links', 'mp_stacks_sociallinks'),
+			'field_description' 	=> NULL,
+			'field_type' 	=> 'showhider',
 			'field_value' => '',
 		),
 		array(
@@ -88,7 +53,8 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_description' 	=> 'Enter the name of this sociallink (Facebook, Twitter, etc)',
 			'field_type' 	=> 'textbox',
 			'field_value' => '',
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
 		),
 		array(
 			'field_id'			=> 'sociallink_icon_type',
@@ -97,7 +63,8 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_type' 	=> 'select',
 			'field_value' => '',
 			'field_select_values' => array('sociallink_icon' => 'Icon', 'sociallink_image' => 'Custom Image'),
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
 		),
 		array(
 			'field_id'			=> 'sociallink_icon',
@@ -106,7 +73,10 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_type' 	=> 'iconfontpicker',
 			'field_value' => '',
 			'field_select_values' => mp_stacks_sociallinks_get_sociallinks_icons(),
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_conditional_id' => 'sociallink_icon_type',
+			'field_conditional_values' => array( 'sociallink_icon' ),
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
 		),
 		array(
 			'field_id'			=> 'sociallink_icon_color',
@@ -114,7 +84,10 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_description' 	=> 'If you\'d like a custom color for this specific icon, select it here:',
 			'field_type' 	=> 'colorpicker',
 			'field_value' => '',
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_conditional_id' => 'sociallink_icon_type',
+			'field_conditional_values' => array( 'sociallink_icon' ),
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
 		),
 		array(
 			'field_id'			=> 'sociallink_icon_color_hover',
@@ -122,7 +95,10 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_description' 	=> 'If you\'d like a custom color for this specific icon when the mouse is over, select it here:',
 			'field_type' 	=> 'colorpicker',
 			'field_value' => '',
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_conditional_id' => 'sociallink_icon_type',
+			'field_conditional_values' => array( 'sociallink_icon' ),
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
 		),
 		array(
 			'field_id'			=> 'sociallink_image',
@@ -130,7 +106,10 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_description' 	=> 'Upload the icon image to use for this Social Link. Tip: Make your image a perfect square.',
 			'field_type' 	=> 'mediaupload',
 			'field_value' => '',
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_conditional_id' => 'sociallink_icon_type',
+			'field_conditional_values' => array( 'sociallink_image' ),
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
 		),
 		array(
 			'field_id'			=> 'sociallink_image_hover',
@@ -138,7 +117,10 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_description' 	=> 'Upload the icon image to use for this Social Link when the mouse is over it. Tip: Make sure this image matches the size of the one above and is a different color.',
 			'field_type' 	=> 'mediaupload',
 			'field_value' => '',
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_conditional_id' => 'sociallink_icon_type',
+			'field_conditional_values' => array( 'sociallink_image' ),
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
 		),
 		array(
 			'field_id'			=> 'sociallink_icon_link',
@@ -146,7 +128,8 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_description' 	=> 'Enter a URL which should be visited when the icon is clicked.',
 			'field_type' 	=> 'url',
 			'field_value' => '',
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
 		),
 		array(
 			'field_id'			=> 'sociallink_icon_link_type',
@@ -155,7 +138,55 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_type' 	=> 'select',
 			'field_value' => '',
 			'field_select_values' => array( '_parent' => __( 'Open in current Window/Tab', 'mp_stacks_sociallinks' ), '_blank' => __( 'Open in New Window/Tab', 'mp_stacks_sociallinks' ) ),
-			'field_repeater' => 'mp_sociallinks_repeater'
+			'field_repeater' => 'mp_sociallinks_repeater',
+			'field_showhider' => 'mp_stacks_sociallinks_links_showhider'
+		),
+		array(
+			'field_id'			=> 'mp_stacks_sociallinks_layout_showhider',
+			'field_title' 	=> __( 'SocialLinks Layout', 'mp_stacks_sociallinks'),
+			'field_description' 	=> NULL,
+			'field_type' 	=> 'showhider',
+			'field_value' => '',
+		),
+		array(
+			'field_id'			=> 'sociallinks_per_row',
+			'field_title' 	=> __( 'Links Per Row', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'How many links do you want from left to right before a new row starts?', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '3',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_spacing',
+			'field_title' 	=> __( 'Link Spacing', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'How much space would you like to have in between each link? (In Pixels)', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '10',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_size',
+			'field_title' 	=> __( 'Social Icon Size', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'What size should the icons be? (Pixels)', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '30',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_color',
+			'field_title' 	=> __( 'Default Icon Colors (Where applicable)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'Select the color the icons will be', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'colorpicker',
+			'field_value' => '',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_color_hover',
+			'field_title' 	=> __( 'Default Mouse-Over Icon Colors (Where applicable)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'Select the color the icons will be when the mouse is over them', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'colorpicker',
+			'field_value' => '',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
 		),
 	);
 	
