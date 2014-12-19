@@ -33,7 +33,7 @@ See full instructions at http://mintplugins.com/doc/mp-stacks
 
 == Changelog ==
 
-= 1.0.0.6 = December 19, 2014
+= 1.0.0.5 = December 19, 2014
 * Re-organized Meta Options using ShowHiders
 * Set default values for icon size and spacing
 
