@@ -35,7 +35,7 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 	
 	//SocialLinks per row
 	$sociallinks_per_row = get_post_meta($post_id, 'sociallinks_per_row', true);
-	$sociallinks_per_row = empty( $sociallinks_per_row ) ? '2' : $sociallinks_per_row;
+	$sociallinks_per_row = empty( $sociallinks_per_row ) ? '3' : $sociallinks_per_row;
 	
 	//SocialLinks spacing
 	$sociallinks_spacing = get_post_meta($post_id, 'sociallinks_spacing', true);
@@ -43,7 +43,7 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 	
 	//SocialLinks icon size
 	$sociallinks_size = get_post_meta($post_id, 'sociallinks_size', true);
-	$sociallinks_size = empty( $sociallinks_size ) ? 20 : $sociallinks_size;
+	$sociallinks_size = empty( $sociallinks_size ) ? 30 : $sociallinks_size;
 	
 	//SocialLinks Color
 	$sociallinks_color = get_post_meta($post_id, 'sociallinks_color', true);
@@ -170,7 +170,7 @@ function mp_stacks_brick_content_output_sociallinks($default_content_output, $mp
 	
 	//SocialLinks per row
 	$sociallinks_per_row = get_post_meta($post_id, 'sociallinks_per_row', true);
-	$sociallinks_per_row = empty( $sociallinks_per_row ) ? '2' : $sociallinks_per_row;
+	$sociallinks_per_row = empty( $sociallinks_per_row ) ? '3' : $sociallinks_per_row;
 	
 	//Feature alignment
 	$sociallink_alignment = get_post_meta($post_id, 'sociallink_alignment', true);
