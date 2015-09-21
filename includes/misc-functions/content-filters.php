@@ -25,6 +25,12 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 		return $css_output;	
 	}
 	
+	//Enqueue Font Awesome CSS
+	wp_enqueue_style( 'mp-stacks-sociallinks-icons', plugins_url( '/fonts/fontello/css/fontello.css', dirname( __FILE__ ) ), array(), MP_STACKS_SOCIALLINKS_VERSION );
+			
+	//Enqueue sociallinks CSS
+	wp_enqueue_style( 'mp_stacks_sociallinks_css', plugins_url( 'css/sociallinks.css', dirname( __FILE__ ) ), array(), MP_STACKS_SOCIALLINKS_VERSION );
+	
 	//Get SocialLinks Metabox Repeater Array
 	$sociallinks_repeaters = get_post_meta($post_id, 'mp_sociallinks_repeater', true);
 	
