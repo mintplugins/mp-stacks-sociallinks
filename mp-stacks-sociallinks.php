@@ -136,7 +136,7 @@ function mp_stacks_sociallinks_include_files(){
 		/**
 		 * enqueue scripts
 		 */
-		require( MP_STACKS_SOCIALLINKS_PLUGIN_DIR . 'includes/misc-functions/enqueue-scripts.php' );
+		require( MP_STACKS_SOCIALLINKS_PLUGIN_DIR . 'includes/misc-functions/admin-enqueue-scripts.php' );
 		
 		/**
 		 * Media Filters for sociallinks
