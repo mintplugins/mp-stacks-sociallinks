@@ -13,6 +13,29 @@
  */
 
 /**
+ * Enqueue Admin JS for Ajax
+ *
+ * @since    1.0.0
+ * @link     http://mintplugins.com/doc/
+ * @see      function_name()
+ * @param  	 array $scripts An array containing the urls for each script as a key>value pair. Each key is what you'd use as the 'handle' in a wp_enqueue_scripts
+ * @return   array $scripts The incoming array with our additional scripts added. These will be added to the Brick Editor footer upon ajax completion.
+ */
+function mp_stacks_sociallinks_ajax_admin_scripts( $scripts, $metabox_id ){
+	
+	if ( $metabox_id != 'mp_stacks_sociallinks_metabox' ){
+		return $scripts;	
+	}
+
+	//Enqueue Admin JS
+	$scripts['mp_stacks_sociallinks_admin'] = plugins_url( 'js/sociallinks-admin.js?ver=' . MP_STACKS_SOCIALLINKS_VERSION, dirname( __FILE__ ) );
+	
+	return $scripts;
+
+}
+add_filter( 'mp_core_metabox_ajax_admin_js_scripts', 'mp_stacks_sociallinks_ajax_admin_scripts', 10, 2 );
+
+/**
  * Enqueue Admin CSS for Ajax
  *
  * @since    1.0.0

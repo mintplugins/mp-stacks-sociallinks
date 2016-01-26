@@ -149,6 +149,21 @@ function mp_stacks_sociallinks_create_meta_box(){
 			'field_type' 	=> 'showhider',
 			'field_value' => '',
 		),
+		
+		//Mobile Controls
+		array(
+			'field_id'	 => 'sociallinks_screen_size_controller',
+			'field_title' => '<div class="brick_screen_size_picker" mp-area-active="closed">
+					<div class="brick_screen_size desktop" mp_stacks_device="desktop"></div>
+					<div class="brick_screen_size tablet" mp_stacks_device="tablet" style="display:none;"></div>
+					<div class="brick_screen_size mobile" mp_stacks_device="mobile" style="display:none;"></div>
+				</div>',
+			'field_description' => '',
+			'field_type' => 'basictext',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		
+		//Desktop/Default Settings
 		array(
 			'field_id'			=> 'sociallinks_per_row',
 			'field_title' 	=> __( 'Links Per Row', 'mp_stacks_sociallinks'),
@@ -184,6 +199,90 @@ function mp_stacks_sociallinks_create_meta_box(){
 		array(
 			'field_id'			=> 'sociallinks_color_hover',
 			'field_title' 	=> __( 'Default Mouse-Over Icon Colors (Where applicable)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'Select the color the icons will be when the mouse is over them', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'colorpicker',
+			'field_value' => '',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		
+		//Tablet Settings
+		array(
+			'field_id'			=> 'sociallinks_per_row_tablet',
+			'field_title' 	=> __( 'Links Per Row (On Tablets)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'How many links do you want from left to right before a new row starts?', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '3',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_spacing_tablet',
+			'field_title' 	=> __( 'Link Spacing (On Tablets)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'How much space would you like to have in between each link? (In Pixels)', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '10',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_size_tablet',
+			'field_title' 	=> __( 'Social Icon Size (On Tablets)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'What size should the icons be? (Pixels)', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '30',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_color_tablet',
+			'field_title' 	=> __( 'Default Icon Colors (On Tablets)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'Select the color the icons will be', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'colorpicker',
+			'field_value' => '',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_color_hover_tablet',
+			'field_title' 	=> __( 'Default Mouse-Over Icon Colors (On Tablets)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'Select the color the icons will be when the mouse is over them', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'colorpicker',
+			'field_value' => '',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		
+		//Mobile Settings
+		array(
+			'field_id'			=> 'sociallinks_per_row_mobile',
+			'field_title' 	=> __( 'Links Per Row (On Mobile)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'How many links do you want from left to right before a new row starts?', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '3',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_spacing_mobile',
+			'field_title' 	=> __( 'Link Spacing (On Mobile)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'How much space would you like to have in between each link? (In Pixels)', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '10',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_size_mobile',
+			'field_title' 	=> __( 'Social Icon Size (On Mobile)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'What size should the icons be? (Pixels)', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'number',
+			'field_value' => '30',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_color_mobile',
+			'field_title' 	=> __( 'Default Icon Colors (On Mobile)', 'mp_stacks_sociallinks'),
+			'field_description' 	=> __( 'Select the color the icons will be', 'mp_stacks_sociallinks' ),
+			'field_type' 	=> 'colorpicker',
+			'field_value' => '',
+			'field_showhider' => 'mp_stacks_sociallinks_layout_showhider'
+		),
+		array(
+			'field_id'			=> 'sociallinks_color_hover_mobile',
+			'field_title' 	=> __( 'Default Mouse-Over Icon Colors (On Mobile)', 'mp_stacks_sociallinks'),
 			'field_description' 	=> __( 'Select the color the icons will be when the mouse is over them', 'mp_stacks_sociallinks' ),
 			'field_type' 	=> 'colorpicker',
 			'field_value' => '',

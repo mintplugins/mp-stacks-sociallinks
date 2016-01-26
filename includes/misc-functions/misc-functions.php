@@ -20,7 +20,6 @@ function mp_stacks_sociallinks_get_sociallinks_icons(){
 	
 	//Get all font styles in the css document and put them in an array
 	$pattern = '/\.(mp-stacks-sociallinks-(?:\w+(?:-)?)+):before\s+{\s*content:\s*"(.+)";\s+}/';
-	//$subject = file_get_contents( plugins_url( '/fonts/font-awesome-4.0.3/css/font-awesome.css', dirname( __FILE__ ) ) );
 	
 	$return = wp_remote_get( plugins_url( '/fonts/fontello/css/fontello.css', dirname( __FILE__ ) ), array( 'sslverify' => false ) );
 	
