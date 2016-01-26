@@ -61,44 +61,44 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 	
 	//SocialLinks icon hover size - make it .5 bigger than non-hover to cover weird whitespace
 	$sociallinks_hover_size = get_post_meta($post_id, 'sociallinks_size', true);
-	$sociallinks_hover_size = empty( $sociallinks_hover_size ) ? '20.5px' : $sociallinks_hover_size . 'px';
+	$sociallinks_hover_size = empty( $sociallinks_hover_size ) ? '20.5' : $sociallinks_hover_size;
 
 
 	//SocialLinks per row (Tablet)
 	$sociallinks_per_row_tablet = mp_core_get_post_meta($post_id, 'sociallinks_per_row_tablet', $sociallinks_per_row);
 	
 	//SocialLinks spacing (Tablet)
-	$sociallinks_spacing_tablet = mp_core_get_post_meta($post_id, 'sociallinks_spacing_tablet', '20');
+	$sociallinks_spacing_tablet = mp_core_get_post_meta($post_id, 'sociallinks_spacing_tablet', $sociallinks_spacing );
 	
 	//SocialLinks icon size (Tablet)
-	$sociallinks_size_tablet = mp_core_get_post_meta($post_id, 'sociallinks_size_tablet', 30);
+	$sociallinks_size_tablet = mp_core_get_post_meta($post_id, 'sociallinks_size_tablet', $sociallinks_size );
 	
 	//SocialLinks Color (Tablet)
-	$sociallinks_color_tablet = mp_core_get_post_meta($post_id, 'sociallinks_color_tablet', '#FFF');
+	$sociallinks_color_tablet = mp_core_get_post_meta($post_id, 'sociallinks_color_tablet', $sociallinks_color );
 	
 	//SocialLinks color hover (Tablet)
-	$sociallinks_color_hover_tablet = mp_core_get_post_meta($post_id, 'sociallinks_color_hover_tablet', '#FFF');
+	$sociallinks_color_hover_tablet = mp_core_get_post_meta($post_id, 'sociallinks_color_hover_tablet', $sociallinks_color_hover );
 	
 	//SocialLinks icon hover size - make it .5 bigger than non-hover to cover weird whitespace (Tablet)
-	$sociallinks_hover_size_tablet = mp_core_get_post_meta($post_id, 'sociallinks_size_tablet', '20.5') . 'px';
+	$sociallinks_hover_size_tablet = mp_core_get_post_meta($post_id, 'sociallinks_size_tablet', $sociallinks_hover_size);
 	
 	//SocialLinks per row (Mobile)
 	$sociallinks_per_row_mobile = mp_core_get_post_meta($post_id, 'sociallinks_per_row_mobile', $sociallinks_per_row);
 	
 	//SocialLinks spacing (Mobile)
-	$sociallinks_spacing_mobile = mp_core_get_post_meta($post_id, 'sociallinks_spacing_mobile', '20');
+	$sociallinks_spacing_mobile = mp_core_get_post_meta($post_id, 'sociallinks_spacing_mobile', $sociallinks_spacing );
 	
 	//SocialLinks icon size (Mobile)
-	$sociallinks_size_mobile = mp_core_get_post_meta($post_id, 'sociallinks_size_mobile', 30);
+	$sociallinks_size_mobile = mp_core_get_post_meta($post_id, 'sociallinks_size_mobile', $sociallinks_size );
 	
 	//SocialLinks Color (Mobile)
-	$sociallinks_color_mobile = mp_core_get_post_meta($post_id, 'sociallinks_color_mobile', '#FFF');
+	$sociallinks_color_mobile = mp_core_get_post_meta($post_id, 'sociallinks_color_mobile', $sociallinks_color );
 	
 	//SocialLinks color hover (Mobile)
-	$sociallinks_color_hover_mobile = mp_core_get_post_meta($post_id, 'sociallinks_color_hover_mobile', '#FFF');
+	$sociallinks_color_hover_mobile = mp_core_get_post_meta($post_id, 'sociallinks_color_hover_mobile', $sociallinks_color_hover );
 	
 	//SocialLinks icon hover size - make it .5 bigger than non-hover to cover weird whitespace (Mobile)
-	$sociallinks_hover_size_mobile = mp_core_get_post_meta($post_id, 'sociallinks_size_mobile', '20.5') . 'px';
+	$sociallinks_hover_size_mobile = mp_core_get_post_meta($post_id, 'sociallinks_size_mobile', $sociallinks_hover_size);
 	
 	
 	
@@ -120,7 +120,7 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 	}
 	#mp-brick-' . $post_id . ' .mp-stacks-sociallink a:hover{ 
 		color:' . $sociallinks_color_hover . ';
-		font-size:' . $sociallinks_hover_size . ';
+		font-size:' . $sociallinks_hover_size . 'px;
 	}
 	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon-container {
 		width: ' . $sociallinks_size . 'px;
@@ -155,7 +155,7 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 		}
 		#mp-brick-' . $post_id . ' .mp-stacks-sociallink a:hover{ 
 			color:' . $sociallinks_color_hover_tablet . ';
-			font-size:' . $sociallinks_hover_size_tablet . ';
+			font-size:' . $sociallinks_hover_size_tablet . 'px;
 		}
 		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon-container {
 			width: ' . $sociallinks_size_tablet . 'px;
@@ -191,7 +191,7 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 		}
 		#mp-brick-' . $post_id . ' .mp-stacks-sociallink a:hover{ 
 			color:' . $sociallinks_color_hover_mobile . ';
-			font-size:' . $sociallinks_hover_size_mobile . ';
+			font-size:' . $sociallinks_hover_size_mobile . 'px;
 		}
 		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon-container {
 			width: ' . $sociallinks_size_mobile . 'px;
