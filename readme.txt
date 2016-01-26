@@ -3,8 +3,8 @@ Contributors: johnstonphilip
 Donate link: http://mintplugins.com/
 Tags: message bar, header
 Requires at least: 3.5
-Tested up to: 4.3
-Stable tag: 1.0.0.8
+Tested up to: 4.4
+Stable tag: 1.0.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ See full instructions at http://mintplugins.com/doc/mp-stacks
 
 
 == Changelog ==
+
+= 1.0.0.9 = January 25, 2015
+* Added Tablet and Mobile specific deisplay controls for SocialLinks
 
 = 1.0.0.8 = September 21, 2015
 * Brick Metabox controls now load using ajax.
