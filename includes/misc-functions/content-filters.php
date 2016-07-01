@@ -110,26 +110,27 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 			
 		}
 	}
-	#mp-brick-' . $post_id . ' .mp-stacks-sociallink{ 
+	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink{ 
 		width:' . $sociallinks_size .'px;
 		height: ' . $sociallinks_size . 'px;
 		margin: ' . $sociallinks_spacing . 'px;
 	}
-	#mp-brick-' . $post_id . ' .mp-stacks-sociallink a{ 
+	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a{ 
 		color:' . $sociallinks_color . ';
 	}
-	#mp-brick-' . $post_id . ' .mp-stacks-sociallink a:hover{ 
+	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a:hover{ 
 		color:' . $sociallinks_color_hover . ';
 		font-size:' . $sociallinks_hover_size . 'px;
 	}
-	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon-container {
+	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-icon-container {
 		width: ' . $sociallinks_size . 'px;
 	}
-	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon {
+	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-icon {
 		font-size: ' . $sociallinks_size . 'px;
 		width: ' . $sociallinks_size . 'px;
+		line-height:1;
 	}
-	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-image {
+	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-image {
 		width: ' . $sociallinks_size . 'px;
 		height: ' . $sociallinks_size . 'px;
 		background-size: ' . $sociallinks_size . 'px;
