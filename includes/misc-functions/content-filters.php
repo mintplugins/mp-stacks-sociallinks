@@ -118,7 +118,8 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a{ 
 		color:' . $sociallinks_color . ';
 	}
-	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a:hover{ 
+	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a:hover, 
+	#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a:hover .mp-stacks-sociallinks-icon{ 
 		color:' . $sociallinks_color_hover . ';
 		font-size:' . $sociallinks_hover_size . 'px;
 	}
@@ -146,26 +147,27 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 			
 		}
 	
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallink{ 
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks  .mp-stacks-sociallink{ 
 			width:' . $sociallinks_size_tablet .'px;
 			height: ' . $sociallinks_size_tablet . 'px;
 			margin: ' . $sociallinks_spacing_tablet . 'px;
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallink a{ 
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a{ 
 			color:' . $sociallinks_color_tablet . ';
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallink a:hover{ 
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a:hover,
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a:hover .mp-stacks-sociallinks-icon{ 
 			color:' . $sociallinks_color_hover_tablet . ';
 			font-size:' . $sociallinks_hover_size_tablet . 'px;
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon-container {
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-icon-container {
 			width: ' . $sociallinks_size_tablet . 'px;
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon {
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-icon {
 			font-size: ' . $sociallinks_size_tablet . 'px;
 			width: ' . $sociallinks_size_tablet . 'px;
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-image {
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-image {
 			width: ' . $sociallinks_size_tablet . 'px;
 			height: ' . $sociallinks_size_tablet . 'px;
 			background-size: ' . $sociallinks_size_tablet . 'px;
@@ -176,32 +178,33 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 	//Mobile
 	$css_sociallinks_output .= '@media (max-width: 600px) {
 		
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallink:nth-child(' . $sociallinks_per_row_mobile . 'n+1){ 
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink:nth-child(' . $sociallinks_per_row_mobile . 'n+1){ 
 			
 			clear:left;
 			
 		}
 		
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallink{ 
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink{ 
 			width:' . $sociallinks_size_mobile .'px;
 			height: ' . $sociallinks_size_mobile . 'px;
 			margin: ' . $sociallinks_spacing_mobile . 'px;
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallink a{ 
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a{ 
 			color:' . $sociallinks_color_mobile . ';
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallink a:hover{ 
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a:hover,
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink a:hover .mp-stacks-sociallinks-icon{ 
 			color:' . $sociallinks_color_hover_mobile . ';
 			font-size:' . $sociallinks_hover_size_mobile . 'px;
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon-container {
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-icon-container {
 			width: ' . $sociallinks_size_mobile . 'px;
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-icon {
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-icon {
 			font-size: ' . $sociallinks_size_mobile . 'px;
 			width: ' . $sociallinks_size_mobile . 'px;
 		}
-		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks-image {
+		#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallinks-image {
 			width: ' . $sociallinks_size_mobile . 'px;
 			height: ' . $sociallinks_size_mobile . 'px;
 			background-size: ' . $sociallinks_size_mobile . 'px;
@@ -225,7 +228,7 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 				
 				//CSS for this Social Icon's Color 
 				if ( !empty( $sociallink_icon_color ) ){
-					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallink-' . $social_link_counter . ' a{';
+					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink-' . $social_link_counter . ' a{';
 						$css_sociallinks_output .= 'color:' . $sociallink_icon_color . ';';
 					$css_sociallinks_output .= '}';
 				}
@@ -237,7 +240,8 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 				
 				//CSS for this Social Icon's Color Hover
 				if ( !empty( $sociallink_icon_color_hover ) ){
-					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallink-' . $social_link_counter . ' a:hover{';
+					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink-' . $social_link_counter . ' a:hover, 
+					#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink-' . $social_link_counter . ' a:hover .mp-stacks-sociallinks-icon {';
 						$css_sociallinks_output .= 'color:' . $sociallink_icon_color_hover . ';';
 					$css_sociallinks_output .= '}';
 				}
@@ -253,10 +257,10 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 				
 				//CSS for this Social Image
 				if ( !empty( $sociallink_image ) ){
-						$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallink-' . $social_link_counter . ' a .mp-stacks-sociallinks-image{';
+						$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink-' . $social_link_counter . ' a .mp-stacks-sociallinks-image{';
 							$css_sociallinks_output .= 'background-image: url(\'' . $sociallink_image . '\');';
 						$css_sociallinks_output .= '}';
-						$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallink-' . $social_link_counter . ' a:hover .mp-stacks-sociallinks-image{';
+						$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink-' . $social_link_counter . ' a:hover .mp-stacks-sociallinks-image{';
 							$css_sociallinks_output .= 'background-image: url(\'' . $sociallink_image_hover . '\');';
 						$css_sociallinks_output .= '}';
 				}
