@@ -61,7 +61,7 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 	
 	//SocialLinks icon hover size - make it .5 bigger than non-hover to cover weird whitespace
 	$sociallinks_hover_size = get_post_meta($post_id, 'sociallinks_size', true);
-	$sociallinks_hover_size = empty( $sociallinks_hover_size ) ? '20.5' : $sociallinks_hover_size;
+	$sociallinks_hover_size = empty( $sociallinks_hover_size ) ? $sociallinks_size : $sociallinks_hover_size;
 
 
 	//SocialLinks per row (Tablet)
@@ -228,7 +228,7 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 				
 				//CSS for this Social Icon's Color 
 				if ( !empty( $sociallink_icon_color ) ){
-					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink-' . $social_link_counter . ' a{';
+					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink.mp-stacks-sociallink-' . $social_link_counter . ' a{';
 						$css_sociallinks_output .= 'color:' . $sociallink_icon_color . ';';
 					$css_sociallinks_output .= '}';
 				}
@@ -240,8 +240,8 @@ function mp_stacks_brick_content_output_css_sociallinks( $css_output, $post_id, 
 				
 				//CSS for this Social Icon's Color Hover
 				if ( !empty( $sociallink_icon_color_hover ) ){
-					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink-' . $social_link_counter . ' a:hover, 
-					#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink-' . $social_link_counter . ' a:hover .mp-stacks-sociallinks-icon {';
+					$css_sociallinks_output .= '#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink.mp-stacks-sociallink-' . $social_link_counter . ' a:hover, 
+					#mp-brick-' . $post_id . ' .mp-stacks-sociallinks .mp-stacks-sociallink.mp-stacks-sociallink-' . $social_link_counter . ' a:hover .mp-stacks-sociallinks-icon {';
 						$css_sociallinks_output .= 'color:' . $sociallink_icon_color_hover . ';';
 					$css_sociallinks_output .= '}';
 				}
