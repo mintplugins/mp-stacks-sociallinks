@@ -4,7 +4,7 @@ Donate link: http://mintplugins.com/
 Tags: message bar, header
 Requires at least: 3.5
 Tested up to: 4.5
-Stable tag: 1.0.1.1
+Stable tag: 1.0.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ See full instructions at http://mintplugins.com/doc/mp-stacks
 
 
 == Changelog ==
+
+= 1.0.1.2 = July 30, 2016
+* Fix for social link hover color and sizes
 
 = 1.0.1.1 = July 5, 2016
 * Further CSS specification improvements
