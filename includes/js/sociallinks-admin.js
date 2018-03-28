@@ -1,25 +1,34 @@
 jQuery(document).ready(function($){
 
-	//Desktop
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_per_row' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_spacing' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_size' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_hover' ).css( 'display', 'none' );
+	$( document ).on( 'click', '[showhidergroup="mp_stacks_sociallinks_layout_showhider"].closed', function() {
 
-	//Tablet
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_per_row_tablet' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_spacing_tablet' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_size_tablet' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_tablet' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_hover_tablet' ).css( 'display', 'none' );
+		//Show only the desktop icon
+		$( '.mp_field_sociallinks_screen_size_controller .brick_screen_size' ).css( 'display', 'none' );
 
-	//Mobile
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_per_row_mobile' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_spacing_mobile' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_size_mobile' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_mobile' ).css( 'display', 'none' );
-	$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_hover_mobile' ).css( 'display', 'none' );
+		$( '.brick_screen_size.desktop' ).css( 'display', 'block' );
+
+		//Desktop
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_per_row' ).css( 'display', 'block' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_spacing' ).css( 'display', 'block' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_size' ).css( 'display', 'block' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color' ).css( 'display', 'block' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_hover' ).css( 'display', 'block' );
+
+		//Tablet
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_per_row_tablet' ).css( 'display', 'none' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_spacing_tablet' ).css( 'display', 'none' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_size_tablet' ).css( 'display', 'none' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_tablet' ).css( 'display', 'none' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_hover_tablet' ).css( 'display', 'none' );
+
+		//Mobile
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_per_row_mobile' ).css( 'display', 'none' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_spacing_mobile' ).css( 'display', 'none' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_size_mobile' ).css( 'display', 'none' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_mobile' ).css( 'display', 'none' );
+		$( '#mp_stacks_sociallinks_layout_showhidershowhider_group .mp_field_sociallinks_color_hover_mobile' ).css( 'display', 'none' );
+
+	});
 
 	/**
 	 * When someone changes the "Screen Size" controller for the SocialLinks Content-Type
@@ -27,7 +36,7 @@ jQuery(document).ready(function($){
 	 * @since    1.0.0
 	 * @link     http://mintplugins.com/doc/   mp_stacks_sociallinks_layout_showhider
 	 */
-	$( document ).on( 'click', '.mp_field_sociallinks_screen_size_controller .brick_screen_size, [showhidergroup*="mp_stacks_sociallinks_layout_showhider"]', function(){
+	$( document ).on( 'click', '.mp_field_sociallinks_screen_size_controller .brick_screen_size', function(){
 
 		var screen_size = $(this).attr( 'mp_stacks_device' );
 
