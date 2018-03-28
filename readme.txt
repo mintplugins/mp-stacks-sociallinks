@@ -4,7 +4,7 @@ Donate link: http://mintplugins.com/
 Tags: message bar, header
 Requires at least: 3.5
 Tested up to: 4.5
-Stable tag: 1.0.1.2
+Stable tag: 1.0.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ This section describes how to install the plugin and get it working.
 
 1. Upload the 'mp-stacks-sociallinks’ folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Build Bricks under the “Stacks and Bricks” menu. 
+3. Build Bricks under the “Stacks and Bricks” menu.
 4. Publish your bricks into a “Stack”.
 5. Put Stacks on pages using the shortcode or the “Add Stack” button.
 
@@ -32,6 +32,9 @@ See full instructions at http://mintplugins.com/doc/mp-stacks
 
 
 == Changelog ==
+
+= 1.0.1.3 = March 27, 2018
+* Only show desktop icons when showhider opened
 
 = 1.0.1.2 = July 30, 2016
 * Fix for social link hover color and sizes
